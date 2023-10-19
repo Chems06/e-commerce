@@ -1,0 +1,12 @@
+<h3>
+    {{ (product | async)?.name }}    
+</h3>
+<p>
+    {{ (product | async)?.price }}  Euros 
+</p>
+
+<p *ngIf="product | async as productData">
+    <span *ngIf="productData.discount.onOff">
+        Discount !! {{ productData.discount.percent }} % !!
+    </span>
+</p>
