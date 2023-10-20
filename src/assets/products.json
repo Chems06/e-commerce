@@ -1,0 +1,42 @@
+{
+  "product": [
+    {
+      "name": "Peluche de lapin en coton",
+      "preview": "link",
+      "description": "",
+      "price": 19.99,
+      "discount": {
+        "onOff": true,
+        "percent": 15
+      }
+    },
+    {
+      "name": "Peluche de lapin en coton",
+      "preview": "link",
+      "description": "",
+      "price": 19.99,
+      "discount": {
+        "onOff": false
+      }
+    },
+    {
+      "name": "Peluche de lapin en coton",
+      "preview": "link",
+      "description": "",
+      "price": 19.99,
+      "discount": {
+        "onOff": true,
+        "percent": 15
+      }
+    },
+    {
+      "name": "Peluche de lapin en coton",
+      "preview": "link",
+      "description": "",
+      "price": 19.99,
+      "discount": {
+        "onOff": false
+      }
+    }
+  ]
+}

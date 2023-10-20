@@ -1,12 +1,10 @@
-<h3>
-    {{ (product | async)?.name }}    
-</h3>
-<p>
-    {{ (product | async)?.price }}  Euros 
-</p>
-
-<p *ngIf="product | async as productData">
-    <span *ngIf="productData.discount.onOff">
-        Discount !! {{ productData.discount.percent }} % !!
-    </span>
-</p>
+<!-- product.component.html -->
+<div class="products" *ngIf="products | async as productsData">
+    <div class="product" *ngFor="let product of productsData.product">
+      <h2>{{ product.name }}</h2>
+      <p>Price: {{ product.price }} euros</p>
+      <p *ngIf="product.discount?.onOff">
+        Discount: {{ product.discount?.percent }} !!
+      </p>
+    </div>
+  </div>

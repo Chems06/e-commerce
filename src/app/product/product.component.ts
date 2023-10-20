@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { Product } from '../product';
+import { Products } from '../products.list';
 import { ProductService } from '../product.service';
 import { Observable } from 'rxjs';
 
@@ -10,16 +10,16 @@ import { Observable } from 'rxjs';
 })
 export class ProductComponent implements OnInit {
 
-  product: Observable<Product> | undefined;
+  products: Observable<Products> | undefined;
 
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
 
-    this.showProduct();
+    this.showProducts();
   }
 
-  showProduct() {
-    this.product = this.productService.getProduct();
+  showProducts() {
+    this.products = this.productService.getProducts();
   }
 }
