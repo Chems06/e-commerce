@@ -1,10 +1,30 @@
-<!-- product.component.html -->
-<div class="products" *ngIf="products | async as productsData">
-    <div class="product" *ngFor="let product of productsData.product">
-      <h2>{{ product.name }}</h2>
-      <p>Price: {{ product.price }} euros</p>
-      <p *ngIf="product.discount?.onOff">
-        Discount: {{ product.discount?.percent }} !!
-      </p>
+<body>
+  <!-- product.component.html -->
+  <section class="product layout_padding">
+    <div class="container">
+  <div class="row " *ngIf="products | async as productsData">
+    <!-- list of the products-->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="box" *ngFor="let product of productsData.product">
+        <!-- display a product-->
+        <a href="">
+          <div class="img-box">
+            <img src="/assets/{{ product.preview }}" alt="" />
+          </div>
+          <div class="detail-box">
+            <h6>{{ product.name }}</h6>
+            <h6>
+              Price
+              <span> ${{ product.price }}</span>
+            </h6>
+          </div>
+          <div class="discount" *ngIf="product.discount?.onOff">
+            <span> {{ product.discount.percent }} % </span>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
+</div>
+</section>
+</body>
