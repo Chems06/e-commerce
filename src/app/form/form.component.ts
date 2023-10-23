@@ -1,34 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { LoggerService } from '../logger.service';
+import { Component } from '@angular/core';
+import {
+  FormGroup,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
 
 @Component({
   selector: 'email-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css'],
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
+  Form: FormGroup;
 
-  e_mail: string = '';
-  name: string = '';
-  message: string = '';
-
-  constructor(private logger: LoggerService) {}
-
-  ngOnInit(): void {}
-
+  constructor(private formBuilder: FormBuilder) {
+    this.Form = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      e_mail: ['', [Validators.required, Validators.email]],
+      message: ['', [Validators.required]],
+    });
+  }
   validate(): void {
     // submit the form et display a modal
-    this.logger.log('Mail :' + this.e_mail);
-    this.logger.log('Name :' + this.name);
-    this.logger.log('Message : ' + this.message);
 
     const modal = document.getElementById('myModal')!;
     const paragraph = modal.querySelector('p');
 
     if (paragraph) {
       // If paragraph is not null, update its text content
-      const modalContent = `${this.message}`;
-      paragraph.textContent = `Form submitted successfully with this content : "${modalContent}`;
+      const modalContent = `${this.Form.value.message}`;
+      const modalUser = `${this.Form.value.name}`;
+      paragraph.textContent = `Form submitted successfully ${modalUser}, your message is the following : "${modalContent}"`;
     } else {
       // where 'p' element is not found
       console.error('Paragraph element not found in the modal');
@@ -38,11 +40,9 @@ export class FormComponent implements OnInit {
     modal.style.display = 'block';
 
     // Clear the form
-    this.e_mail = '';
-    this.name = '';
-    this.message = '';
-
-    this.logger.log('Message sent! :)');
+    this.Form.value.e_mail = '';
+    this.Form.value.name = '';
+    this.Form.value.message = '';
   }
   closeModal() {
     // Close the modal

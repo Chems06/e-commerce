@@ -1,5 +1,6 @@
 <div class="row">
-  <form class="form-container" (ngSubmit)="validate()">
+  <form class="form-container" [formGroup]="Form" (ngSubmit)="validate()">
+    <p> All fields are required .</p>
     <div class="form-group">
       <label for="name"> Name : </label>
       <input
@@ -7,7 +8,7 @@
         id="name"
         placeholder="Enter your name"
         name="name"
-        [(ngModel)]="name"
+        formControlName="name"
       />
     </div>
 
@@ -18,7 +19,7 @@
         id="e_mail"
         name="e_mail"
         placeholder="Enter your e_mail"
-        [(ngModel)]="e_mail"
+        formControlName="e_mail"
       />
     </div>
 
@@ -28,11 +29,11 @@
         id="message"
         name="message"
         placeholder="Enter your message"
-        [(ngModel)]="message"
+        formControlName="message"
       >
       </textarea>
     </div>
-    <button type="submit">Validate</button>
+    <button type="submit" [disabled]="!Form.valid">Validate</button>
 
     <div id="myModal" class="modal">
       <div class="modal-content">
