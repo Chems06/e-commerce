@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-import {
-  FormGroup,
-  Validators,
-  FormBuilder,
-} from '@angular/forms';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'email-form',
@@ -22,7 +18,6 @@ export class FormComponent {
   }
   validate(): void {
     // submit the form et display a modal
-
     const modal = document.getElementById('myModal')!;
     const paragraph = modal.querySelector('p');
 

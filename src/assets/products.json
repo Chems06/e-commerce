@@ -3,7 +3,7 @@
     {
       "name": "Peluche de lapin en coton",
       "preview": "images/lapin_crochet.jpg",
-      "description": "",
+      "description": "greh(tgy('zrethtj('z",
       "price": 19.99,
       "discount": {
         "onOff": true,
@@ -11,57 +11,29 @@
       }
     },
     {
-      "name": "Peluche de lapin en coton",
-      "preview": "images/lapin_crochet.jpg",
-      "description": "",
+      "name": "Dragon",
+      "preview": "images/dragon_crochet.jpg",
+      "description": "crochet d'un dragon blanc de taille x, y. Il a été fait par mathilde ",
       "price": 19.99,
       "discount": {
         "onOff": false
       }
     },
     {
-      "name": "Peluche de lapin en coton",
-      "preview": "images/lapin_crochet.jpg",
-      "description": "",
-      "price": 19.99,
+      "name": "Salamèche",
+      "preview": "images/pokemon_crochet.jpg",
+      "description": "Crochet du pokemon salamèche de taille x. Il a été fait par mathilde",
+      "price": 9.99,
       "discount": {
         "onOff": true,
         "percent": 15
       }
     },
     {
-      "name": "Peluche de lapin en coton",
-      "preview": "images/lapin_crochet.jpg",
-      "description": "",
-      "price": 19.99,
-      "discount": {
-        "onOff": false
-      }
-    },
-    {
-      "name": "Peluche de lapin en coton",
-      "preview": "images/lapin_crochet.jpg",
-      "description": "",
-      "price": 19.99,
-      "discount": {
-        "onOff": false
-      }
-    },
-    {
-      "name": "Peluche de lapin en coton",
-      "preview": "images/lapin_crochet.jpg",
-      "description": "",
-      "price": 19.99,
-      "discount": {
-        "onOff": true,
-        "percent": 15
-      }
-    },
-    {
-      "name": "Peluche de lapin en coton",
-      "preview": "images/lapin_crochet.jpg",
-      "description": "",
-      "price": 19.99,
+      "name": "Peluche de lapin en coton 3",
+      "preview": "images/poussin.jpg",
+      "description": "Poussin bleu :)",
+      "price": 2.99,
       "discount": {
         "onOff": false
       }
