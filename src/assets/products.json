@@ -1,9 +1,9 @@
 {
   "product": [
     {
-      "name": "Peluche de lapin en coton",
+      "name": "Pochi",
       "preview": "images/lapin_crochet.jpg",
-      "description": "greh(tgy('zrethtj('z",
+      "description": "Pochi est un hamster crocheté ",
       "price": 19.99,
       "discount": {
         "onOff": true,
