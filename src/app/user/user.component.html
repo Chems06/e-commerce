@@ -1,10 +1,27 @@
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <ul class="list-group">
-                <li class="list-group-item">test1</li>
-                <li class="list-group-item">test2</li>
-            </ul>
-        </div>
+  <!-- user.component.html -->
+  <div class="row">
+    <!-- Colonne pour la liste des utilisateurs -->
+    <div class="col-4 mx-auto" *ngIf="users | async as usersData">
+      <div class="list-group" id="list-tab" role="tablist">
+        <!-- Utilisation de ngFor pour itérer sur chaque utilisateur -->
+        <a
+          *ngFor="let user of usersData.user"
+          class="list-group-item list-group-item-action"
+          id="list-{{ user.firstName }}-list"
+          data-bs-toggle="list"
+          role="tab"
+          (click)="selectUser(user)"
+        >
+          {{ user.firstName }}
+        </a>
+      </div>
     </div>
+    <!-- Colonne pour le contenu des onglets -->
+    <div class="col-8" *ngIf="selectedUser">
+      <!-- Afficher les détails de l'utilisateur sélectionné -->
+      <h4>{{ selectedUser.firstName }} {{ selectedUser.lastName }}</h4>
+      <p>Date de naissance : {{ selectedUser.dayOfBirth }}</p>
+    </div>
+  </div>
 </div>
