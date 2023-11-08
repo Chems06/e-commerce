@@ -4,8 +4,8 @@
     <div class="container">
       <div class="row" *ngIf="products | async as productsData">
         <!-- list of the products-->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box" *ngFor="let product of productsData.product">
+        <div *ngFor="let product of productsData.product" class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box" >
             <!-- display a product-->
             <div class="img-box" style="cursor: pointer;" (click)="openModal(product)">
               <img src="/assets/{{ product.preview }}" alt="" />

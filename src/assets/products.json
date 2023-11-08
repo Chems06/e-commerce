@@ -3,7 +3,7 @@
     {
       "name": "Pochi",
       "preview": "images/lapin_crochet.jpg",
-      "description": "Pochi est un hamster crocheté ",
+      "description": "Pochi est un lapin crocheté, trouvé sur internet",
       "price": 19.99,
       "discount": {
         "onOff": true,
