@@ -8,7 +8,7 @@
         <div class="user">
           <a
             *ngFor="let user of usersData.user"
-            class="list-group-item list-group-item-action"
+            class="list-group-item list-group-item-action text-bg-primary mb-3"
             id="list-{{ user.firstName }}-list"
             data-bs-toggle="list"
             role="tab"
@@ -20,7 +20,7 @@
       </div>
     </div>
     <!-- Colonne pour le contenu des onglets -->
-    <div class="col-8 selected" *ngIf="selectedUser">
+    <div class="col-8 selected text-bg-info mb-3" *ngIf="selectedUser">
       <!-- Afficher les détails de l'utilisateur sélectionné -->
       <h4>{{ selectedUser.firstName }} {{ selectedUser.lastName }}</h4>
       <p>Date de naissance : {{ selectedUser.dayOfBirth }}</p>

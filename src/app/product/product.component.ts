@@ -26,16 +26,12 @@ export class ProductComponent implements OnInit {
   openModal(product : any) : void{
     const modal = document.getElementById('myModal')!;
     const paragraph = modal.querySelector('p');
-    console.log('Open modal');
 
     if (paragraph) {
-      // If paragraph is not null, update its text content
       paragraph.innerHTML  = `Le nom de l'article est :  ${product.name} 
       <br> c'est un ${product.description}
-      <br> son prix est de ${product.price}`;   
+      <br> son prix est de ${product.price} euros`;   
      } else {
-      // where 'p' element is not found
-      console.error('Paragraph element not found in the modal');
       return;
     }
 
@@ -43,8 +39,6 @@ export class ProductComponent implements OnInit {
 
   }
   closeModal() {
-    // Close the modal
-    console.log('Closing modal');
     const modal = document.getElementById('myModal')!;
     modal.style.display = 'none';
   }

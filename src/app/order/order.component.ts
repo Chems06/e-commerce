@@ -26,6 +26,5 @@ export class OrderComponent {
 
   selectOrder(order: Order) {
     this.selectedOrder = order;
-    console.log('Commande séléctionnée' + order.user)
   }
 }

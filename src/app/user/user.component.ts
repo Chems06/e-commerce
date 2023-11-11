@@ -27,6 +27,5 @@ export class UserComponent implements OnInit {
 
   selectUser(user: User) {
     this.selectedUser = user;
-    console.log('utilisateur séléctionné' + user.firstName)
-  }
+    }
 }
