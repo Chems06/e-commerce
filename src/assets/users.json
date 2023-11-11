@@ -1,0 +1,20 @@
+{
+  "user": [
+    {
+      "firstName": "Chems",
+      "lastName": "O",
+      "dayOfBirth": "01-02"
+    },
+    {
+      "firstName": "Mathilde",
+      "lastName": "L",
+      "dayOfBirth": "01-03"
+    },
+
+    {
+      "firstName": "Houda",
+      "lastName": "Y",
+      "dayOfBirth": "01-04"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+.order {
+  padding-top: 20px;
+  padding-bottom: 150px;
+}
+
+.selected {
+    background-color: var(--bs-primary-bg-subtle);
+}
+.list-group-item {
+    border-color: var(--bs-primary-border-subtle);
+}

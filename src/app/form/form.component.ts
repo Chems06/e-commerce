@@ -1,38 +1,41 @@
-import { Component,OnInit } from '@angular/core';
-import { LoggerService } from '../logger.service';
+import { Component } from '@angular/core';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'email-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
+  Form: FormGroup;
 
-  e_mail : string = '';
-  name : string = '';
-  message: string = '';
-
-  constructor(private logger: LoggerService) { }
-
-  ngOnInit() : void{
- 
+  constructor(private formBuilder: FormBuilder) {
+    this.Form = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      e_mail: ['', [Validators.required, Validators.email]],
+      message: ['', [Validators.required]],
+    });
   }
-
-
   validate(): void {
-    
-    this.logger.log('Mail :' + this.e_mail);
+    const modal = document.getElementById('myModal')!;
+    const paragraph = modal.querySelector('p');
 
-    this.logger.log('Name :' + this.name);
+    if (paragraph) {
+      const modalContent = `${this.Form.value.message}`;
+      const modalUser = `${this.Form.value.name}`;
+      paragraph.textContent = `Form submitted successfully ${modalUser}, your message is the following : "${modalContent}"`;
+    } else {
+      return;
+    }
 
-    this.logger.log('Message : ' + this.message);
+    modal.style.display = 'block';
 
-    this.e_mail = '';
-
-    this.name = '';
-
-    this.message = '';
-
-    this.logger.log('Message sent! :)');
+    this.Form.value.e_mail = '';
+    this.Form.value.name = '';
+    this.Form.value.message = '';
+  }
+  closeModal() {
+    const modal = document.getElementById('myModal')!;
+    modal.style.display = 'none';
   }
 }

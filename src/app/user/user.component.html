@@ -1,0 +1,29 @@
+<div class="container">
+  <!-- user.component.html -->
+  <div class="row">
+    <!-- Colonne pour la liste des utilisateurs -->
+    <div class="col-4 mx-auto" *ngIf="users | async as usersData">
+      <div class="list-group" id="list-tab" role="tablist">
+        <!-- Utilisation de ngFor pour itérer sur chaque utilisateur -->
+        <div class="user">
+          <a
+            *ngFor="let user of usersData.user"
+            class="list-group-item list-group-item-action text-bg-primary mb-3"
+            id="list-{{ user.firstName }}-list"
+            data-bs-toggle="list"
+            role="tab"
+            (click)="selectUser(user)"
+          >
+            {{ user.firstName }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Colonne pour le contenu des onglets -->
+    <div class="col-8 selected text-bg-info mb-3" *ngIf="selectedUser">
+      <!-- Afficher les détails de l'utilisateur sélectionné -->
+      <h4>{{ selectedUser.firstName }} {{ selectedUser.lastName }}</h4>
+      <p>Date de naissance : {{ selectedUser.dayOfBirth }}</p>
+    </div>
+  </div>
+</div>

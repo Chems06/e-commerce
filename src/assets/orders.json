@@ -1,0 +1,20 @@
+{
+    "order": [
+      {
+        "user": "Chems O",
+        "product": "Dragon",
+        "dateOfPurchase": "28-10-2023"
+      },
+      {
+        "user": "Mathilde L",
+        "product": "Pochi",
+        "dateOfPurchase": "28-11-2023"
+      },
+  
+      {
+        "user": "Houda Y",
+        "product": "Salamèche",
+        "dateOfPurchase": "30-10-2023"
+      }
+    ]
+  }

@@ -1,0 +1,30 @@
+<div class="container mx-auto">
+  <!-- order.component.html -->
+  <div class="row">
+    <!-- Colonne pour la liste des commandes -->
+    <div class="col-4 mx-auto" *ngIf="orders | async as ordersData">
+      <div class="list-group" id="list-tab" role="tablist">
+        <!-- Utilisation de ngFor pour itérer sur chaque commande -->
+        <div class="order">
+          <a
+            *ngFor="let order of ordersData.order"
+            class="list-group-item list-group-item-actio mb-3"
+            id="list-{{ order.user }}-list"
+            data-bs-toggle="list"
+            role="tab"
+            (click)="selectOrder(order)"
+          >
+            {{ order.user }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Colonne pour le contenu des onglets -->
+    <div class="col-8 selected " *ngIf="selectedOrder">
+      <!-- Afficher les détails de la commande sélectionnée -->
+      <h4>{{ selectedOrder.user }}</h4>
+      <p>Produit acheté :{{ selectedOrder.product }}</p>
+      <p>Date d'achat : {{ selectedOrder.dateOfPurchase }}</p>
+    </div>
+  </div>
+</div>

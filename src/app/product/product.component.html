@@ -1,0 +1,34 @@
+<body>
+  <!-- product.component.html -->
+  <section class="product layout_padding">
+    <div class="container">
+      <div class="row" *ngIf="products | async as productsData">
+        <!-- list of the products-->
+        <div *ngFor="let product of productsData.product" class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box" >
+            <!-- display a product-->
+            <div class="img-box" style="cursor: pointer;" (click)="openModal(product)">
+              <img src="/assets/{{ product.preview }}" alt="" />
+            </div>
+            <div class="detail-box" >
+              <h6 (click)="openModal(product)" style="cursor: pointer;">{{ product.name }}</h6>
+              <h6 (click)="openModal(product)" style="cursor: pointer;">
+                Price
+                <span> ${{ product.price }}</span>
+              </h6>
+            </div>
+            <div class="discount" *ngIf="product.discount?.onOff">
+              <span> {{ product.discount.percent }} % </span>
+            </div>
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close" (click)="closeModal()">&times;</span>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

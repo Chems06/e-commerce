@@ -1,0 +1,42 @@
+{
+  "product": [
+    {
+      "name": "Pochi",
+      "preview": "images/lapin_crochet.jpg",
+      "description": "lapin crocheté, trouvé sur internet",
+      "price": 19.99,
+      "discount": {
+        "onOff": true,
+        "percent": 15
+      }
+    },
+    {
+      "name": "Dragon",
+      "preview": "images/dragon_crochet.jpg",
+      "description": "crochet d'un dragon blanc de taille x, y. Il a été fait par mathilde ",
+      "price": 19.99,
+      "discount": {
+        "onOff": false
+      }
+    },
+    {
+      "name": "Salamèche",
+      "preview": "images/pokemon_crochet.jpg",
+      "description": "Crochet du pokemon salamèche de taille x. Il a été fait par mathilde",
+      "price": 9.99,
+      "discount": {
+        "onOff": true,
+        "percent": 15
+      }
+    },
+    {
+      "name": "Peluche de lapin en coton 3",
+      "preview": "images/poussin.jpg",
+      "description": "Poussin bleu :)",
+      "price": 2.99,
+      "discount": {
+        "onOff": false
+      }
+    }
+  ]
+}
